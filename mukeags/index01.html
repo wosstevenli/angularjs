@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Angular JS慕课网学习</title>
+</head>
+<body ng-app="myapp" ng-controller="MainController">
+<form name="regform" ng-submit="submitform()">
+    <div class="form-group">
+        <lable>用户名：</lable>
+        <input name="username"
+               ng-model="username"
+               ng-class="{'error':regform.username.$invalid && regform.username.$touched}"
+               ng-minlength="4"
+               ng-maxlength="10"
+               required
+               type="text" class="form-control">
+        <bottom type="submit" class="btn btn-primary" ng-disabled="regform.username.$invalid">提交</bottom>
+    </div>
+</form>
+</body>
+</html>

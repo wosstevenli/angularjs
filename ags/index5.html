@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+    <title>验证输入</title>
+</head>
+<body>
+<!--<form ng-app="" name="usereg">
+    E-mail:<input type="email" name="myemailaddress" ng-model="text">
+    <span ng-show="usereg.myemailaddress.$error.email">输入的邮箱格式不正确，请重新输入！</span>
+</form>-->
+
+<form ng-app="" name="usereg01" ng-init="myemail='wosstevenli@gmail.com'">
+    E-mail状态:<input type="email" name="myemail" ng-model="myemail" required>
+    <h2>状态实时变化</h2>
+    <p>判断内容是否合法{{usereg01.myemail.$valid}}</p>
+    <p>判断内容是否更改{{usereg01.myemail.$dirty}}</p>
+    <p>判断是否点击屏幕{{usereg01.myemail.$touched}}</p>
+</form>
+
+<script src="js/index.js"></script>
+</body>
+</html>

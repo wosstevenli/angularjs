@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+    <title>Angular css</title>
+</head>
+
+<script>
+    var app = angular.module('ags003',[]);
+    app.controller('agsct003',function($scope){
+        $scope.dianhua="iPhone";
+    });
+</script>
+
+<body>
+<div ng-app="ags003" ng-controller="agsct003">
+    <h3>{{dianhua}}</h3>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

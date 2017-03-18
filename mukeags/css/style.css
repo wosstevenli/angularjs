@@ -1,0 +1,21 @@
+input.error{
+    border: 1px solid red;
+}
+.error{
+    color: red;
+}
+/*p.error{
+    display: none;
+}*/
+.wapper{
+    width: 200px;
+    margin: 100px auto;
+}
+.input_result{
+    position: relative;
+    top: -28px;
+    left: 180px;
+}
+p.success{
+    color: #3c763d;
+}

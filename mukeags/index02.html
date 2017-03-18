@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Angularjs表单验证</title>
+</head>
+<body ng-app="myapp" ng-controller="SingUpController">
+<div class="wapper">
+    <h3>用户注册</h3>
+    <form name="singupform" ng-submit="submitForm()">
+        <div class="form-group">
+            <lable>用户名：</lable>
+            <input  type="text"
+                    name="username"
+                    class="form-control"
+                    ng-model="userdata.username"
+                    >
+            <p class="error"></p>
+        </div>
+        <div class="form-group">
+            <lable>密码：</lable>
+            <input  type="password"
+                    name="password"
+                    class="form-control"
+                    ng-model="userdata.password"
+                    >
+            <p class="error"></p>
+        </div>
+        <div class="form-group">
+            <lable>确认密码：</lable>
+            <input  type="password"
+                    name="cfgpw"
+                    class="form-control"
+                    ng-model="userdata.cfgpw"
+                    >
+            <p class="error"></p>
+        </div>
+        <bottom type="submit" class="btn btn-primary">提交</bottom>
+    </form>
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

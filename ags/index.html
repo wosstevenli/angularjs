@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+    <title>Angular JS学习</title>
+</head>
+<body>
+
+<!--<div ng-app="">
+    <p>Name:<input type="text" ng-model="name"> </p>
+    <p>今天是{{name}}</p>
+    <p ng-init="xingmin='hello'"></p>
+    &lt;!&ndash;<p ng-init="firstName='Li'"></p>&ndash;&gt;
+    <p ng-init="firstName='Li';lastName='Steven'"></p>
+    &lt;!&ndash;<p ng-init="lastName='Steven'"></p>&ndash;&gt;
+    <p>姓名为<span ng-bind="xingmin"></span></p>
+    <div>{{5+5}}</div>
+    <div>{{5*5}}</div>
+    &lt;!&ndash;<div>{{firstName + " " + lastName}}</div>&ndash;&gt;
+    <div>{{firstName+lastName}}</div>
+</div>-->
+
+<!--<div data-ng-app="">
+    <p>XING:<input type="text" data-ng-model="xing"></p>
+    <p>姓名为{{xing}}</p>
+</div>-->
+
+<div ng-app="ags001" ng-controller="agsc001">
+    姓：<input type="text" ng-model="XING"><br>
+    名：<input type="text" ng-model="MING"><br>
+    <br>
+    姓名：{{XING+" "+MING}}
+
+    <div ng-init="danjia=5400;shuliang=125">
+        <p>合计:{{danjia*shuliang}}<br><span ng-bind="danjia*shuliang"></span></p>
+    </div>
+
+    <div ng-init="person={xing:'li',ming:'steven'}">
+        <p>全名为:{{person.ming}}</p>
+        <p>{{person.xing+person.ming}}</p>
+    </div>
+
+    <p>----------------我是分界线---------------</p>
+
+    <div ng-init="person={xing:'li',ming:'steven'}">
+        <!--<p>word全名为:<span ng-bind="{{person.xing}}"></span>{{person.ming}}</p>-->
+        <p>word全名为:<span ng-bind="person.xing"></span></p>
+        <p>{{person.xing+person.ming}}</p>
+    </div>
+
+    <p>----------------我是分界线---------------</p>
+    <div ng-init="ren=[51,82,93,49,65]">
+        <p>数组{{ren[2]}}</p>
+    </div>
+
+    <div ng-init="ren=[51,82,93,49,65]">
+        <p>数组<span ng-bind="{{ren[3]}}"></span></p>
+        <p ng-bind="{{ren[1]}}">还可以写东西吗，不可以了</p>
+    </div>
+
+    <p>----------------我是分界线---------------</p>
+    <div ng-init="shuziyi;shuzier">
+        <h3>计算器</h3>
+        数量：<input type="number" ng-model="shuziyi">
+        价格：<input type="number" ng-model="shuzier">
+        <p>总价：{{shuziyi*shuzier}}</p>
+    </div>
+
+    <p>----------------我是分界线---------------</p>
+    <div ng-init="name=['风波','肖平','狗带']">
+        <h2>ng-repeat循环数组</h2>
+        <ul>
+            <li ng-repeat="sm in name">
+                {{sm}}
+            </li>
+        </ul>
+    </div>
+
+    <p>----------------我是分界线---------------</p>
+    <div ng-init="xinxi=[
+    {xin:'xiao',ming:'ping'},
+    {xin:'he',ming:'fengbo'},
+    {xin:'lin',ming:'ke'}]">
+    </div>
+    <p>循环对象:</p>
+    <ul>
+        <li ng-repeat="xingxi in xinxi">
+            {{xingxi.xin+xingxi.ming}}
+        </li>
+    </ul>
+
+    <p>----------------我是分界线---------------</p>
+
+</div>
+
+<script src="js/index.js"></script>
+<!--<script>
+    var app=angular.module('ags001',[]);
+    app.controller('agsc001',function($scope){
+        $scope.XING="JON";
+        $scope.MING="SNOW";
+    });
+</script>-->
+</body>
+</html>

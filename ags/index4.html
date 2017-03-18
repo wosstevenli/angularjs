@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+    <title>Angular JS学习</title>
+</head>
+<body>
+
+<!--<div ng-app="ags002" ng-controller="mx">
+    名字:<input ng-model="name">
+</div>
+
+<script>
+    var app = angular.module("ags002", []);
+    app.controller("mx", function($scope) {
+        $scope.name="Jon snow";
+    });
+</script>
+-->
+
+<div ng-app="ags002" ng-controller="mx">
+    名字:<input ng-model="name">
+    <h2>你的名字是:{{name}}</h2>
+</div>
+
+<script>
+    var app = angular.module("ags002", []);
+    app.controller("mx", function($scope) {
+        $scope.name="Jon snow";
+    });
+</script>
+
+<script src="js/index.js"></script>
+</body>
+</html>
